@@ -1,0 +1,119 @@
+{
+  "sjtu_root": "D:\\codex\\seed\\SEED\\SJTU",
+  "extracted_feature_files": 45,
+  "preprocessed_eeg_files": 45,
+  "stimulus_video_files": 15,
+  "feature_example": {
+    "file": "D:\\codex\\seed\\SEED\\SJTU\\ExtractedFeatures_1s\\1_20131027.mat",
+    "num_arrays": 180,
+    "selected_arrays": {
+      "de_LDS1": {
+        "shape": [
+          62,
+          235,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "de_movingAve1": {
+        "shape": [
+          62,
+          235,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "psd_LDS1": {
+        "shape": [
+          62,
+          235,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "dasm_LDS1": {
+        "shape": [
+          27,
+          235,
+          5
+        ],
+        "dtype": "float64"
+      },
+      "asm_LDS1": {
+        "shape": [
+          54,
+          235,
+          5
+        ],
+        "dtype": "float64"
+      }
+    }
+  },
+  "preprocessed_example": {
+    "file": "D:\\codex\\seed\\SEED\\SJTU\\Preprocessed_EEG\\dujingcheng_20131027.mat",
+    "num_arrays": 15,
+    "trial_shapes": {
+      "djc_eeg1": [
+        62,
+        47001
+      ],
+      "djc_eeg2": [
+        62,
+        46601
+      ],
+      "djc_eeg3": [
+        62,
+        41201
+      ],
+      "djc_eeg4": [
+        62,
+        47601
+      ],
+      "djc_eeg5": [
+        62,
+        37001
+      ],
+      "djc_eeg6": [
+        62,
+        39001
+      ],
+      "djc_eeg7": [
+        62,
+        47401
+      ],
+      "djc_eeg8": [
+        62,
+        43201
+      ],
+      "djc_eeg9": [
+        62,
+        53001
+      ],
+      "djc_eeg10": [
+        62,
+        47401
+      ],
+      "djc_eeg11": [
+        62,
+        47001
+      ],
+      "djc_eeg12": [
+        62,
+        46601
+      ],
+      "djc_eeg13": [
+        62,
+        47001
+      ],
+      "djc_eeg14": [
+        62,
+        47601
+      ],
+      "djc_eeg15": [
+        62,
+        41201
+      ]
+    }
+  },
+  "note": "Stimuli are emotion-inducing film clips, not participant facial response videos."
+}
