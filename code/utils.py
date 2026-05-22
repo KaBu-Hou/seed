@@ -103,8 +103,9 @@ def standardize_train_test(
 ) -> tuple[np.ndarray, np.ndarray]:
     if axes is None:
         axes = tuple(range(train_x.ndim - 1))
-    mean = train_x.mean(axis=tuple(axes), keepdims=True)
-    std = train_x.std(axis=tuple(axes), keepdims=True)
+    train_stats = train_x.astype(np.float32, copy=False)
+    mean = train_stats.mean(axis=tuple(axes), keepdims=True, dtype=np.float32)
+    std = train_stats.std(axis=tuple(axes), keepdims=True, dtype=np.float32)
     std = np.where(std < 1e-6, 1.0, std)
     return (train_x - mean) / std, (test_x - mean) / std
 

@@ -97,3 +97,25 @@ python code\train_eval.py --max_sessions 4 --subjects 1 2 --epochs 1 --batch_siz
 ## 当前限制
 
 论文的完整多模态与意识检测结果依赖作者自采数据：10 名健康被试、21 名 DoC 患者、32 通道 EEG 与被试面部视频。本地 SEED 目录没有这部分数据，因此当前不能严格复现患者意识检测 Table VIII。下一步正式实验应先跑完整 SEED EEG LOSO，再把结果与论文 Table III 的 subject-independent STST 结果对比。
+
+## STST/Swin 与 image56 更新
+
+已新增 `--model stst_swin` 和 `--eeg_representation image56`。该路径按论文的 `56 x 56 x n` Swin 输入思想，把 SEED trial 内连续 56 个 1 秒 DE 时间窗重构为 EEG 特征图：
+
+```text
+62 x 56 x 5 -> bilinear resize -> 56 x 56 x 5 -> PyTorch B x 5 x 56 x 56
+```
+
+这不是从 62 个物理通道中选 56 个通道。论文没有说明 62 通道如何变成 `56 x 56 x 5`，所以这里将其标注为实现假设；`patch_size=2` 来自论文图中 `56 x 56 x n -> 28 x 28 x 4n`，`window_size=7`、`depths=[2,2,2]`、`heads=[2,4,8]`、`mlp_ratio=4.0`、`dropout=0.1` 是 Swin 风格实现假设。
+
+调试命令：
+
+```powershell
+python code\train_eval.py --data_npz processed\eeg_de_lds.npz --model stst_swin --eeg_representation image56 --eeg_context 56 --subjects 1 2 --epochs 1 --batch_size 16 --hidden 32 --max_samples_per_subject 200 --out_dir outputs\debug_stst_swin_image56
+```
+
+正式 subject-independent 命令：
+
+```powershell
+python code\train_eval.py --data_npz processed\eeg_de_lds.npz --model stst_swin --eeg_representation image56 --eeg_context 56 --epochs 100 --batch_size 32 --hidden 64 --out_dir outputs\seed_subject_independent_stst_swin_image56
+```

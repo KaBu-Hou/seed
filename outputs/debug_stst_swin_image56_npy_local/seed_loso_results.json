@@ -1,0 +1,123 @@
+{
+  "protocol": "subject_independent_loso",
+  "protocol_description": "LOSO subject-independent on SEED ExtractedFeatures_1s/de_LDS",
+  "model": "stst_swin",
+  "eeg_representation": "image56",
+  "eeg_context": 56,
+  "paper_sourced_settings": [
+    "SEED 62-ch EEG, 3-class positive/neutral/negative",
+    "DE features from five bands",
+    "1-second non-overlapping EEG feature intervals",
+    "Swin Transformer based backbone",
+    "4 STAE layers from paper ablation",
+    "AdamW, lr=3e-4, cosine annealing, batch size 32, 100 epochs for full run",
+    "LOSO-CV for public datasets"
+  ],
+  "implementation_assumptions": [
+    "image56 maps trial-local 62 x 56 x 5 DE contexts to 56 x 56 x 5 by bilinear resize",
+    "patch_size=2 inferred from 56x56xn to 28x28x4n in the paper figure",
+    "window_size, depths, heads, mlp_ratio, dropout are Swin-style assumptions not explicitly reported"
+  ],
+  "subjects": [
+    1
+  ],
+  "mean_accuracy": 0.3125,
+  "std_accuracy": 0.0,
+  "mean_macro_f1": 0.23669646658152402,
+  "std_macro_f1": 0.0,
+  "mean_uar": 0.27619047619047615,
+  "std_uar": 0.0,
+  "folds": [
+    {
+      "test_subject": 1,
+      "metrics": {
+        "accuracy": 0.3125,
+        "macro_f1": 0.23669646658152402,
+        "uar": 0.27619047619047615
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.0841881334781647,
+          "accuracy": 0.3125,
+          "macro_f1": 0.23669646658152402,
+          "uar": 0.27619047619047615
+        }
+      ],
+      "y_pred": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "y_true": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2
+      ]
+    }
+  ],
+  "figures": {
+    "out_dir_confusion_matrix": "outputs\\debug_stst_swin_image56_npy_local\\debug_stst_swin_image56_npy_local_subject_independent_loso_confusion_matrix.png",
+    "out_dir_accuracy_curves": "outputs\\debug_stst_swin_image56_npy_local\\debug_stst_swin_image56_npy_local_subject_independent_loso_accuracy_curves.png",
+    "figures_confusion_matrix": "D:\\codex\\seed\\figures\\debug_stst_swin_image56_npy_local_subject_independent_loso_confusion_matrix.png",
+    "figures_accuracy_curves": "D:\\codex\\seed\\figures\\debug_stst_swin_image56_npy_local_subject_independent_loso_accuracy_curves.png"
+  }
+}

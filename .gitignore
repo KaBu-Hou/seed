@@ -7,3 +7,9 @@ __pycache__/
 .ruff_cache/
 .DS_Store
 Thumbs.db
+
+# Large derived feature caches. Rebuild with code/preprocess_eeg.py and
+# code/precompute_image56*.py instead of storing them in the GitHub repo.
+processed/eeg_de_lds.npz
+processed/eeg_de_lds_two_subjects_image56/
+processed/eeg_de_lds_two_subjects_image56_npy/

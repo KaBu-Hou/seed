@@ -1,0 +1,110 @@
+{
+  "cache_dir": "processed/eeg_de_lds_image56_npy",
+  "source_npz": "processed/eeg_de_lds.npz",
+  "meta": {
+    "format": "eeg_image56_npy",
+    "source": "processed/eeg_de_lds.npz",
+    "x_file": "x_image56.npy",
+    "shape": [
+      152730,
+      5,
+      56,
+      56
+    ],
+    "dtype": "float32",
+    "context": 56,
+    "mapping": "trial-local 62 x context x 5 DE windows -> B x 5 x 56 x 56 bilinear resize"
+  },
+  "shape_ok": true,
+  "lengths_ok": true,
+  "labels_match_source": true,
+  "subjects_match_source": true,
+  "sessions_match_source": true,
+  "trials_match_source": true,
+  "source_summary": {
+    "name": "source_x",
+    "shape": [
+      152730,
+      62,
+      5
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 10.567626953125,
+    "max": 42.113670349121094,
+    "mean": 19.841603486839624,
+    "std": 3.4531687316687214,
+    "p01": 12.68745421409607,
+    "p50": 19.35655403137207,
+    "p99": 27.60968591690063
+  },
+  "cache_sample_summary": {
+    "name": "cache_x_sample",
+    "shape": [
+      64,
+      5,
+      56,
+      56
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 11.540559768676758,
+    "max": 32.98160934448242,
+    "mean": 19.894405069627933,
+    "std": 3.2841255992674663,
+    "p01": 13.585735530853272,
+    "p50": 19.477697372436523,
+    "p99": 27.228475494384764
+  },
+  "label_counts": {
+    "0": 50400,
+    "1": 49680,
+    "2": 52650
+  },
+  "subject_counts": {
+    "1": 10182,
+    "2": 10182,
+    "3": 10182,
+    "4": 10182,
+    "5": 10182,
+    "6": 10182,
+    "7": 10182,
+    "8": 10182,
+    "9": 10182,
+    "10": 10182,
+    "11": 10182,
+    "12": 10182,
+    "13": 10182,
+    "14": 10182,
+    "15": 10182
+  },
+  "trial_counts": {
+    "1": 10575,
+    "2": 10485,
+    "3": 9270,
+    "4": 10710,
+    "5": 8325,
+    "6": 8775,
+    "7": 10665,
+    "8": 9720,
+    "9": 11925,
+    "10": 10665,
+    "11": 10575,
+    "12": 10485,
+    "13": 10575,
+    "14": 10710,
+    "15": 9270
+  },
+  "dynamic_compare": {
+    "num_samples": 64,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "p99_abs_diff": 0.0,
+    "allclose_atol_1e-5": true
+  },
+  "passed": true
+}

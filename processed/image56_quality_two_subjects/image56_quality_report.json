@@ -1,0 +1,97 @@
+{
+  "cache_dir": "processed\\eeg_de_lds_two_subjects_image56_npy",
+  "source_npz": "processed\\eeg_de_lds_two_subjects.npz",
+  "meta": {
+    "format": "eeg_image56_npy",
+    "source": "processed\\eeg_de_lds_two_subjects.npz",
+    "x_file": "x_image56.npy",
+    "shape": [
+      20364,
+      5,
+      56,
+      56
+    ],
+    "dtype": "float32",
+    "context": 56,
+    "mapping": "trial-local 62 x context x 5 DE windows -> B x 5 x 56 x 56 bilinear resize"
+  },
+  "shape_ok": true,
+  "lengths_ok": true,
+  "labels_match_source": true,
+  "subjects_match_source": true,
+  "sessions_match_source": true,
+  "trials_match_source": true,
+  "source_summary": {
+    "name": "source_x",
+    "shape": [
+      20364,
+      62,
+      5
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 10.722843170166016,
+    "max": 42.113670349121094,
+    "mean": 19.762640763987537,
+    "std": 3.776866452196677,
+    "p01": 12.336067943572997,
+    "p50": 19.074212074279785,
+    "p99": 28.38773206710816
+  },
+  "cache_sample_summary": {
+    "name": "cache_x_sample",
+    "shape": [
+      16,
+      5,
+      56,
+      56
+    ],
+    "dtype": "float32",
+    "finite_ratio": 1.0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 11.944463729858398,
+    "max": 33.20796585083008,
+    "mean": 19.97501004865127,
+    "std": 3.7841588338471737,
+    "p01": 13.355055122375488,
+    "p50": 19.19715976715088,
+    "p99": 28.513333663940426
+  },
+  "label_counts": {
+    "0": 6720,
+    "1": 6624,
+    "2": 7020
+  },
+  "subject_counts": {
+    "1": 10182,
+    "2": 10182
+  },
+  "trial_counts": {
+    "1": 1410,
+    "2": 1398,
+    "3": 1236,
+    "4": 1428,
+    "5": 1110,
+    "6": 1170,
+    "7": 1422,
+    "8": 1296,
+    "9": 1590,
+    "10": 1422,
+    "11": 1410,
+    "12": 1398,
+    "13": 1410,
+    "14": 1428,
+    "15": 1236
+  },
+  "dynamic_compare": {
+    "num_samples": 16,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "p99_abs_diff": 0.0,
+    "allclose_atol_1e-5": true
+  },
+  "passed": true
+}
